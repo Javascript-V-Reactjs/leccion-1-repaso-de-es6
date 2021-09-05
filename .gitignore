@@ -1,9 +1,10 @@
 # Yarn
 .yarn/*
-!.yarn/cache
+!.yarn/cache/*
 !.yarn/releases
 !.yarn/plugins
 !.yarn/sdks
 !.yarn/versions
 
 node_modules
+.DS_STORE
