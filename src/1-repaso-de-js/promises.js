@@ -8,16 +8,14 @@ const buyTicketSlowProcess = () => {
     })
 }
 console.log('I am waiting')
-// buyTicket().then(success => console.log(success))
-//            .catch(error => console.log(error))
-
-async function buyTicket () {
-    try {
-        const result = await buyTicketSlowProcess() // pausa la ejecucion
-        console.log(result)
-    } catch(error){
-        console.log(error)
-    }
-}
-
-buyTicket()
+buyTicketSlowProcess().then(message => {
+                        console.log(message)
+                        return message
+                    }).then(message => {
+                        return new Promise((resolve, reject) => {
+                            setTimeout(() => {
+                                console.log(`${message} in uppercase`.toUpperCase())
+                            }, 3000)
+                        })
+                    })
+                    .catch(error => console.log(error))

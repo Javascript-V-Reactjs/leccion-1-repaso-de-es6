@@ -1,8 +1,11 @@
-// [a, b, ...spread] = [10, 20, 30, 40, 50]
+let a
+let b
+let spread
+[a, b, ...spread] = [10, 20, 30, 40, 50]
 
-// console.log(spread)
-// console.log(a)
-// console.log(b)
+console.log(spread)
+console.log(a)
+console.log(b)
 
 export default function sum (...args) {
     let result = 0

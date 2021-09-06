@@ -1,3 +1,4 @@
 import sum from './rest-spread.js'
 
-console.log(sum(2,2,2))
+const importedValue = sum(10, 20, 30)
+console.log('This is a imported value', importedValue)
